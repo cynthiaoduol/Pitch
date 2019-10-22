@@ -4,7 +4,7 @@ from. import main
 @main.route('/')
 def index():
     '''
-    root page function that returns the index page and its data
+    view root page function that returns the index page and its data
     '''
     title = "Welcome | One Minute Pitch"
 
