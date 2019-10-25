@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+<div class="pitch7">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 comments">
+        <h4>
+
+          {% if pitch.user.profile_pic_path %}
+          <img src="{{url_for('static',filename = pitch.user.profile_pic_path)}}" alt="" class="img-rounded" width="50px"
+            height="50px" style="border-radius: 50%">
+          {% else %}
+          <img src="{{url_for('static',filename = 'photos/user.png')}}" alt="" class="rounded" width="50px"
+            height="50px">
+          {% endif %}
+          <a href="/user/{{pitch.user.username}}&{{pitch.user.id}}">{{pitch.user.username|capitalize}}</a>
+        </h4>
+        <p class="pitch-content">{{pitch.pitch_text}}</p>
+        <br>
+        <div class="col-md-6 ">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="btn btn-primary" href="{{url_for('main.like',id=pitch.id)}}"><i
+                  class="fa fa-thumbs-up fa-1x"></i></a>
+            </li>
+            <li class="list-inline-item">{{likes|length}}</li>
+
+            <li class="list-inline-item"><a class="btn btn-warning" href="{{url_for('main.dislike',id=pitch.id)}}"><i
+                  class="fa fa-thumbs-down fa-1x"></i></a>
+            </li>
+            <li class="list-inline-item">{{dislikes|length}}</li>
+          </ul>
+        </div>
+        <div>
+          {{wtf.quick_form(comment_form)}}
+        </div>
+      </div>
+
+      <h4>Comments</h4>
+      {{macro.displayComments(comments)}}
+      <hr>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
