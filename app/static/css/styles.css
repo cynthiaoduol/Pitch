@@ -1,0 +1,44 @@
+.start{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)),url('/static/photos/bottle.jpg');
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  color:aquamarine;
+  
+}
+.intro{
+  text-align: center;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
+}
+.login{
+  background-image:url('/static/photos/lit.jpeg');
+  background-size: cover;
+}
+.regist{
+  background-image: url('/static/photos/man.jpeg');
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+.prof{
+  background-color:grey;
+  color:aqua;
+  padding-bottom: 9rem;
+}
+.showcategory{
+  background-color:grey;
+  color: white;
+}
+.cate{
+  /* padding-top: 2rem;
+  padding-bottom: 10rem; */
+  background-image:linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)),url('/static/photos/bottle.jpg');
+  background-size: cover;
+  padding-bottom: 52rem;
+  color: whitesmoke;
+}
+.pitch7{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)),url('/static/photos/tree.jpg');
+  background-size: cover;
+
+}
