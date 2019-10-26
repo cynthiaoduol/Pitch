@@ -3,6 +3,7 @@ import os
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:minutepitch@localhost/pitch'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
     
     # Email Configurations
@@ -21,7 +22,7 @@ class ProdConfig(Config):
 
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:minutepitch@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:minutepitch@localhost/pitch_test'
 
 
 class DevConfig(Config):
