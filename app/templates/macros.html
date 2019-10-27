@@ -54,7 +54,7 @@
     {% else %}
     <img src="{{url_for('static',filename = 'photos/user.png')}}" alt="" class="rounded" width ="30px" height="30px">
     {% endif %}
-    <a href="/user/{{comment.user.username}}&{{comment.user.id}}">{{comment.user.username|capitalize}}</a>
+    <a href="/user/{{comment.user.username}}&{{comment.user.id}}" style="background-color: aquamarine">{{comment.user.username|capitalize}}</a>
   </p>
   <p>{{comment.comment_content}}</p>
 </div>
@@ -67,7 +67,7 @@
 <div class="container-fluid showcategory">
 <div class="col-md-12">
   <h3>
-    <a href="/user/{{category.user.username}}&{{category.user.id}}">{{category.user.username|capitalize}}</a>
+    <a href="/user/{{category.user.username}}&{{category.user.id}}" style="background-color: aquamarine">{{category.user.username|capitalize}}</a>
   </h3>
   <p style="font-size:20px">{{category.pitch_text}}</p>
   <p class="small"> Category: {{category.pitch_category}} </p>
