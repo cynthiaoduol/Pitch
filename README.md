@@ -21,33 +21,24 @@ This  is a flask application that allows users to post one minute pitches and al
 ## BDD
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Load the page | **On page load** | Select between signup and login|
-| Select SignUp| **Email**,**Username**,**Password** | Redirect to login|
-| Select Login | **Username** and **password** | Redirect to page with app pitches based on categories and commenting section|
-| Select comment button | **Comment** | Form that you input your comment|
-| Click on submit |  | Redirect to all comments tamplate with your comment and other comments|
+| Load the page | On page load | Select between sign up and  sign in|
+| Select SignUp| Email, Username and Password | Redirect to sign in|
+| Select Sign in | Username and password | Redirect to page with app pitches and a form to add your own pitch and the pitch category|
+| Select comment button | Comment | Form that you input your comment|
 
 
 ## Development Installation
-To get the code..
+To get the application..
 
-1. Cloning the repository:
+1. Clone the repository:
   https://github.com/cynthiaoduol/Pitch.git
 
-2. Move to the folder and install requirements
+
+2. Run the application
   ```bash
-  cd Pitch
-  pip install -r requirements.txt
+  ./start.sh
   ```
-3. Exporting Configurations
-  ```bash
-  export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
-  ```
-4. Running the application
-  ```bash
-  python3.6 manage.py server
-  ```
-5. Testing the application
+3. Testing the application
   ```bash
   python3.6 manage.py test
   ```
@@ -57,17 +48,18 @@ Open the application on your browser `127.0.0.1:5000`.
 ## Technology used
 
 * Python3.6
-* Flask
-* Heroku
+* Flask 
+* Html for the templates
+* CSS for styling
 
 
 ## Known Bugs
-* There are no known bugs currently but pull requests are allowed incase you spot a bug
+There are no known bugs currently but pull requests are allowed incase you spot a bug
 
 ## Contact Information 
 
-If you have any question or contributions, please email me at [cynthiaobu940@gmail.com]
+If you have any questions or contributions, please email me at cynthiaobu940@gmail.com
 
 ## License
-* *MIT License:*
-* Copyright (c) 2019 **Cynthia Oduol**
+*MIT License*
+Copyright (c) 2019 **Cynthia Oduol**
